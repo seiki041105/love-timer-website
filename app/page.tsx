@@ -4177,16 +4177,15 @@ export default function LoveTimerApp() {
   // 主页
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
-      {/* 背景视频 */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/earth2.mp4" type="video/mp4" />
-      </video>
+      {/* 淡粉色背景 */}
+      <div 
+        className="absolute inset-0 w-full h-full z-0"
+        style={{
+        background: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd9 25%, #f48fb1 50%, #f06292 75%, #ec407a 100%)',
+        backgroundSize: '400% 400%',
+        animation: 'gradientShift 15s ease infinite'
+       }}
+     />
 
       {/* 光粒子效果 */}
       <LightParticles />
