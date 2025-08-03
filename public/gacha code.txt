@@ -1,0 +1,431 @@
+// 扭蛋游戏页面 - 增强版本
+const GachaGame = ({
+  onBack,
+  visitedPages,
+  setVisitedPages,
+  language,
+}: {
+  onBack: () => void
+  visitedPages: string[]
+  setVisitedPages: (pages: string[]) => void
+  language: "zh" | "ja" | "en"
+}) => {
+  const [isSpinning, setIsSpinning] = useState(false)
+  const [currentPhoto, setCurrentPhoto] = useState<string | null>(null)
+  const [collectedPhotos, setCollectedPhotos] = useState<string[]>([])
+  const [showSaveNotification, setShowSaveNotification] = useState(false)
+  const [spinAnimation, setSpinAnimation] = useState("")
+
+  const translations = {
+    zh: {
+      gachaGame: "🎰 美食扭蛋机",
+      collection: "收集",
+      reset: "重置",
+      saved: "已保存收集",
+      spinning: "扭蛋中...",
+      spinOnce: "🎲 扭一次",
+      obtained: "🎉 获得了：",
+      foodCollection: "📚 美食收集册",
+      chanceToGet: "每次扭蛋都有机会获得我们一起吃过的美食照片！",
+      epic: "🌟 史诗",
+      rare: "💎 稀有",
+      common: "⭐ 普通",
+    },
+    ja: {
+      gachaGame: "🎰 グルメガチャマシン",
+      collection: "コレクション",
+      reset: "リセット",
+      saved: "コレクション保存済み",
+      spinning: "ガチャ中...",
+      spinOnce: "🎲 1回引く",
+      obtained: "🎉 獲得：",
+      foodCollection: "📚 グルメコレクション",
+      chanceToGet: "ガチャを引くたびに一緒に食べた美食の写真を獲得するチャンス！",
+      epic: "🌟 エピック",
+      rare: "💎 レア",
+      common: "⭐ コモン",
+    },
+    en: {
+      gachaGame: "🎰 Food Gacha Machine",
+      collection: "Collection",
+      reset: "Reset",
+      saved: "Collection saved",
+      spinning: "Spinning...",
+      spinOnce: "🎲 Spin Once",
+      obtained: "🎉 Obtained:",
+      foodCollection: "📚 Food Collection",
+      chanceToGet: "Every spin gives you a chance to get photos of food we've eaten together!",
+      epic: "🌟 Epic",
+      rare: "💎 Rare",
+      common: "⭐ Common",
+    },
+  }
+
+  const t = translations[language]
+
+  const foodPhotos = [
+    {
+      id: "cream-bacon-pasta",
+      name: { zh: "奶油培根意大利面", ja: "クリームベーコンイタリアン", en: "Cream Bacon Pasta" },
+      image: "/images/food/奶油培根意大利面.jpg",
+      rarity: "epic",
+      description: { 
+        zh: "浓郁的奶油酱汁包裹着弹牙的意大利面，搭配香煎培根，每一口都是满满的幸福感。",
+        ja: "濃厚なクリームソースでコシのあるイタリアンを包み、香ばしいベーコンと共に、一口ごとに満足感が溢れます。",
+        en: "Al dente pasta wrapped in rich cream sauce with crispy bacon, every bite brings pure happiness."
+      }
+    },
+    {
+      id: "pudding-tiramisu",
+      name: { zh: "布丁&提拉米苏组合", ja: "プリン&ティラミスセット", en: "Pudding & Tiramisu Combo" },
+      image: "/images/food/布丁&提拉米苏组合.jpg",
+      rarity: "epic",
+      description: { 
+        zh: "滑嫩的布丁与浓郁的提拉米苏完美搭配，甜而不腻，是下午茶的绝佳选择。",
+        ja: "なめらかなプリンと濃厚なティラミスの完璧な組み合わせ、甘さ控えめでアフタヌーンティーに最適です。",
+        en: "Smooth pudding paired with rich tiramisu, sweet but not overwhelming, perfect for afternoon tea."
+      }
+    },
+    {
+      id: "italian-bolognese",
+      name: { zh: "意大利肉酱焗饭", ja: "イタリアンボロネーゼグラタン", en: "Italian Bolognese Gratin" },
+      image: "/images/food/意大利肉酱焗饭.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "经典意式肉酱与芝士的完美融合，焗烤后香气四溢，让人食欲大开。",
+        ja: "クラシックなイタリアンソースとチーズの完璧な融合、グラタン焼きで香り豊か、食欲をそそります。",
+        en: "Classic Italian sauce perfectly blended with cheese, baked to perfection with irresistible aroma."
+      }
+    },
+    {
+      id: "hamburger-steak",
+      name: { zh: "汉堡肉套餐", ja: "ハンバーグステーキセット", en: "Hamburger Steak Set" },
+      image: "/images/food/汉堡肉套餐.jpg",
+      rarity: "common",
+      description: { 
+        zh: "多汁的汉堡肉饼配以新鲜蔬菜和土豆泥，营养均衡又美味。",
+        ja: "ジューシーなハンバーグステーキに新鮮な野菜とマッシュポテト、栄養バランスが良く美味しいです。",
+        en: "Juicy hamburger steak with fresh vegetables and mashed potatoes, nutritious and delicious."
+      }
+    },
+    {
+      id: "corn-cream-soup",
+      name: { zh: "玉米奶油浓汤", ja: "コーンクリームスープ", en: "Corn Cream Soup" },
+      image: "/images/food/玉米奶油浓汤.jpg",
+      rarity: "common",
+      description: { 
+        zh: "香甜的玉米与浓郁奶油的完美结合，温暖人心的一道汤品。",
+        ja: "甘いコーンと濃厚なクリームの完璧な組み合わせ、心を温めるスープです。",
+        en: "Sweet corn perfectly combined with rich cream, a heartwarming soup dish."
+      }
+    },
+    {
+      id: "curry-naan",
+      name: { zh: "咖喱馕套餐", ja: "カレーナーンセット", en: "Curry Naan Set" },
+      image: "/images/food/咖喱馕套餐.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "香浓的咖喱配以松软的馕饼，印度风味的完美呈现。",
+        ja: "香り豊かなカレーにふわふわのナン、インド風味の完璧な表現です。",
+        en: "Aromatic curry with fluffy naan bread, perfect presentation of Indian flavors."
+      }
+    },
+    {
+      id: "handmade-takoyaki",
+      name: { zh: "手作love章鱼烧", ja: "手作りloveたこ焼き", en: "Handmade Love Takoyaki" },
+      image: "/images/food/手作love章鱼烧.jpg",
+      rarity: "epic",
+      description: { 
+        zh: "用心制作的章鱼烧，每一颗都充满爱意，外酥内嫩，章鱼鲜美。",
+        ja: "心を込めて作ったたこ焼き、一つ一つに愛が込められ、外はサクサク、中はふわふわ、たこは新鮮です。",
+        en: "Handmade takoyaki filled with love, crispy outside and tender inside with fresh octopus."
+      }
+    },
+    {
+      id: "melon-soda",
+      name: { zh: "蜜瓜苏打", ja: "メロンソーダ", en: "Melon Soda" },
+      image: "/images/food/蜜瓜苏打.jpg",
+      rarity: "common",
+      description: { 
+        zh: "清爽的蜜瓜味苏打水，夏日解暑的最佳选择。",
+        ja: "さわやかなメロン味のソーダ、夏の暑さを癒す最高の選択です。",
+        en: "Refreshing melon-flavored soda, the best choice for cooling down in summer."
+      }
+    },
+    {
+      id: "hydrangea-parfait",
+      name: { zh: "紫阳花芭菲", ja: "紫陽花パフェ", en: "Hydrangea Parfait" },
+      image: "/images/food/紫阳花芭菲.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "以紫阳花为灵感的精致芭菲，色彩缤纷，口感层次丰富。",
+        ja: "紫陽花をモチーフにした繊細なパフェ、色鮮やかで味わいの層が豊富です。",
+        en: "Delicate parfait inspired by hydrangeas, colorful with rich layers of flavors."
+      }
+    },
+    {
+      id: "matcha-curry-udon",
+      name: { zh: "抹茶咖喱乌冬", ja: "抹茶カレーうどん", en: "Matcha Curry Udon" },
+      image: "/images/food/抹茶咖喱乌冬.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "创新的抹茶咖喱乌冬，抹茶的清香与咖喱的浓郁完美融合。",
+        ja: "革新的な抹茶カレーうどん、抹茶の香りとカレーの濃厚さが完璧に融合しています。",
+        en: "Innovative matcha curry udon, perfectly blending matcha's fragrance with curry's richness."
+      }
+    },
+    {
+      id: "matcha-soba",
+      name: { zh: "抹茶荞麦素面", ja: "抹茶そば", en: "Matcha Soba" },
+      image: "/images/food/抹茶荞麦素面.jpg",
+      rarity: "common",
+      description: { 
+        zh: "清新的抹茶荞麦面，健康美味，是日式料理的经典。",
+        ja: "さわやかな抹茶そば、ヘルシーで美味しい、和食の定番です。",
+        en: "Fresh matcha soba noodles, healthy and delicious, a Japanese classic."
+      }
+    },
+    {
+      id: "tempura-udon",
+      name: { zh: "天妇罗拌乌冬", ja: "天ぷらうどん", en: "Tempura Udon" },
+      image: "/images/food/天妇罗拌乌冬.jpg",
+      rarity: "common",
+      description: { 
+        zh: "酥脆的天妇罗配以弹牙的乌冬面，日式料理的精髓。",
+        ja: "サクサクの天ぷらにコシのあるうどん、和食の真髄です。",
+        en: "Crispy tempura with chewy udon noodles, the essence of Japanese cuisine."
+      }
+    },
+    {
+      id: "tempura-soup-udon",
+      name: { zh: "天妇罗汤乌冬", ja: "天ぷら汁うどん", en: "Tempura Soup Udon" },
+      image: "/images/food/天妇罗汤乌冬.jpg",
+      rarity: "common",
+      description: { 
+        zh: "热腾腾的汤乌冬配以酥脆天妇罗，温暖身心的美味。",
+        ja: "熱々の汁うどんにサクサクの天ぷら、心身を温める美味しさです。",
+        en: "Hot soup udon with crispy tempura, a warming and delicious comfort food."
+      }
+    },
+    {
+      id: "ryoma-bento",
+      name: { zh: "Ryoma特制爱心便当", ja: "Ryoma特製愛心弁当", en: "Ryoma's Special Love Bento" },
+      image: "/images/food/Ryoma特制爱心便当.jpg",
+      rarity: "epic",
+      description: { 
+        zh: "Ryoma精心制作的爱心便当，每一道菜都充满爱意，营养丰富又美味。",
+        ja: "Ryomaが心を込めて作った愛心弁当、一品一品に愛が込められ、栄養豊富で美味しいです。",
+        en: "Ryoma's carefully crafted love bento, each dish filled with love, nutritious and delicious."
+      }
+    },
+    {
+      id: "ice-cream-combo",
+      name: { zh: "波子汽水冰淇淋&薄荷巧克力冰淇淋组合", ja: "ラムネアイス&ミントチョコアイスセット", en: "Ramune Ice Cream & Mint Chocolate Ice Cream Combo" },
+      image: "/images/food/波子汽水冰淇淋&薄荷巧克力冰淇淋组合.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "清爽的波子汽水冰淇淋与浓郁的薄荷巧克力冰淇淋，冰爽双享受。",
+        ja: "さわやかなラムネアイスと濃厚なミントチョコアイス、涼しい二重の楽しみです。",
+        en: "Refreshing ramune ice cream with rich mint chocolate ice cream, a cool double treat."
+      }
+    },
+    {
+      id: "instant-noodles",
+      name: { zh: "泡面", ja: "インスタントラーメン", en: "Instant Noodles" },
+      image: "/images/food/泡面.JPG",
+      rarity: "common",
+      description: { 
+        zh: "经典的泡面，简单快捷，是深夜食堂的必备美食。",
+        ja: "クラシックなインスタントラーメン、簡単で早い、深夜食堂の必須グルメです。",
+        en: "Classic instant noodles, simple and quick, essential late-night comfort food."
+      }
+    },
+    {
+      id: "braised-pork-roll",
+      name: { zh: "卤肉卷", ja: "ルーローロール", en: "Braised Pork Roll" },
+      image: "/images/food/卤肉卷.JPG",
+      rarity: "common",
+      description: { 
+        zh: "香浓的卤肉卷，肉质软烂，味道浓郁，是传统小吃的代表。",
+        ja: "香り豊かなルーローロール、肉は柔らかく、味わい深い、伝統的な軽食の代表です。",
+        en: "Aromatic braised pork roll, tender meat with rich flavor, a traditional snack representative."
+      }
+    },
+    {
+      id: "sweet-oil-cake",
+      name: { zh: "糖油粑粑", ja: "糖油粑粑", en: "Sweet Oil Cake" },
+      image: "/images/food/糖油粑粑.JPG",
+      rarity: "common",
+      description: { 
+        zh: "传统小吃糖油粑粑，外酥内软，甜而不腻，是童年的美好回忆。",
+        ja: "伝統的な軽食糖油粑粑、外はサクサク、中はふわふわ、甘さ控えめで子供時代の美しい思い出です。",
+        en: "Traditional snack sweet oil cake, crispy outside and soft inside, sweet but not overwhelming, childhood memories."
+      }
+    },
+    {
+      id: "grilled-skewers",
+      name: { zh: "烤串", ja: "焼き鳥", en: "Grilled Skewers" },
+      image: "/images/food/烤串.JPG",
+      rarity: "common",
+      description: { 
+        zh: "香喷喷的烤串，炭火烤制，香气四溢，是夜市美食的经典。",
+        ja: "香ばしい焼き鳥、炭火で焼き上げ、香り豊か、夜市グルメの定番です。",
+        en: "Aromatic grilled skewers, charcoal-grilled with rich aroma, a classic night market food."
+      }
+    },
+    {
+      id: "stinky-tofu",
+      name: { zh: "臭豆腐", ja: "臭豆腐", en: "Stinky Tofu" },
+      image: "/images/food/臭豆腐.JPG",
+      rarity: "rare",
+      description: { 
+        zh: "闻着臭吃着香的臭豆腐，外酥内嫩，是勇敢者的美食挑战。",
+        ja: "臭いが香ばしい臭豆腐、外はサクサク、中はふわふわ、勇者のグルメチャレンジです。",
+        en: "Stinky tofu that smells strong but tastes delicious, crispy outside and tender inside, a brave food challenge."
+      }
+    },
+    {
+      id: "steamed-dumplings",
+      name: { zh: "蒸饺", ja: "蒸し餃子", en: "Steamed Dumplings" },
+      image: "/images/food/蒸饺.JPG",
+      rarity: "common",
+      description: { 
+        zh: "晶莹剔透的蒸饺，皮薄馅大，一口一个，美味无穷。",
+        ja: "透き通った蒸し餃子、皮は薄く、具はたっぷり、一口で美味しさが溢れます。",
+        en: "Crystal clear steamed dumplings, thin skin with generous filling, delicious bite by bite."
+      }
+    },
+    {
+      id: "egg-fried-rice",
+      name: { zh: "蛋炒饭", ja: "卵チャーハン", en: "Egg Fried Rice" },
+      image: "/images/food/蛋炒饭.JPG",
+      rarity: "common",
+      description: { 
+        zh: "经典的蛋炒饭，粒粒分明，蛋香浓郁，是家常便饭的经典。",
+        ja: "クラシックな卵チャーハン、一粒一粒がはっきり、卵の香り豊か、家庭料理の定番です。",
+        en: "Classic egg fried rice, each grain distinct with rich egg aroma, a household staple."
+      }
+    },
+    {
+      id: "mixed-noodles",
+      name: { zh: "拌面", ja: "混ぜ麺", en: "Mixed Noodles" },
+      image: "/images/food/拌面.JPG",
+      rarity: "common",
+      description: { 
+        zh: "清爽的拌面，面条弹牙，配料丰富，是夏日解暑的好选择。",
+        ja: "さわやかな混ぜ麺、麺はコシがあり、具材は豊富、夏の暑さを癒す良い選択です。",
+        en: "Refreshing mixed noodles, chewy noodles with rich toppings, great for cooling down in summer."
+      }
+    },
+    {
+      id: "roujiamo",
+      name: { zh: "肉夹馍", ja: "肉夾饃", en: "Roujiamo" },
+      image: "/images/food/肉夹馍.JPG",
+      rarity: "common",
+      description: { 
+        zh: "陕西特色肉夹馍，外酥内软，肉香浓郁，是传统小吃的代表。",
+        ja: "陝西特産の肉夾饃、外はサクサク、中はふわふわ、肉の香り豊か、伝統的な軽食の代表です。",
+        en: "Shaanxi specialty roujiamo, crispy outside and soft inside with rich meat aroma, traditional snack representative."
+      }
+    },
+    {
+      id: "hotel-breakfast",
+      name: { zh: "酒店早餐", ja: "ホテル朝食", en: "Hotel Breakfast" },
+      image: "/images/food/酒店早餐.JPG",
+      rarity: "common",
+      description: { 
+        zh: "丰盛的酒店早餐，种类繁多，营养均衡，是美好一天的开始。",
+        ja: "豊富なホテル朝食、種類豊富で栄養バランスが良く、素晴らしい一日の始まりです。",
+        en: "Abundant hotel breakfast with variety and balanced nutrition, the start of a wonderful day."
+      }
+    },
+    {
+      id: "beijing-duck",
+      name: { zh: "北京烤鸭", ja: "北京ダック", en: "Beijing Duck" },
+      image: "/images/food/北京烤鸭.JPG",
+      rarity: "epic",
+      description: { 
+        zh: "北京名菜烤鸭，皮酥肉嫩，色泽金黄，是中华美食的瑰宝。",
+        ja: "北京名菜の北京ダック、皮はサクサク、肉は柔らかく、黄金色、中華料理の宝石です。",
+        en: "Beijing's famous roast duck, crispy skin and tender meat with golden color, a treasure of Chinese cuisine."
+      }
+    },
+    {
+      id: "curry-udon",
+      name: { zh: "咖喱乌冬", ja: "カレーうどん", en: "Curry Udon" },
+      image: "/images/food/咖喱乌冬.jpg",
+      rarity: "common",
+      description: { 
+        zh: "浓郁的咖喱乌冬，面条弹牙，汤汁浓郁，是日式咖喱的经典。",
+        ja: "濃厚なカレーうどん、麺はコシがあり、スープは濃厚、和風カレーの定番です。",
+        en: "Rich curry udon with chewy noodles and thick soup, a Japanese curry classic."
+      }
+    },
+    {
+      id: "hachi-cocoa",
+      name: { zh: "小八可可", ja: "ハチココア", en: "Hachi Cocoa" },
+      image: "/images/food/小八可可.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "可爱的小八可可，造型独特，味道浓郁，是动漫主题的甜品。",
+        ja: "可愛いハチココア、ユニークなデザインで味わい深い、アニメテーマのデザートです。",
+        en: "Cute Hachi cocoa with unique design and rich flavor, an anime-themed dessert."
+      }
+    },
+    {
+      id: "usagi-cocoa",
+      name: { zh: "乌萨奇可可", ja: "ウサギココア", en: "Usagi Cocoa" },
+      image: "/images/food/乌萨奇可可.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "可爱的乌萨奇可可，兔子造型，香甜可口，是萌系甜品的代表。",
+        ja: "可愛いウサギココア、ウサギのデザインで甘く美味しい、萌え系デザートの代表です。",
+        en: "Cute Usagi cocoa with bunny design, sweet and delicious, representative of kawaii desserts."
+      }
+    },
+    {
+      id: "apple-candy",
+      name: { zh: "苹果糖", ja: "りんご飴", en: "Apple Candy" },
+      image: "/images/food/苹果糖.jpg",
+      rarity: "common",
+      description: { 
+        zh: "晶莹剔透的苹果糖，酸甜可口，是传统糖果的经典。",
+        ja: "透き通ったりんご飴、甘酸っぱく美味しい、伝統的な飴の定番です。",
+        en: "Crystal clear apple candy, sweet and sour, a traditional candy classic."
+      }
+    },
+    {
+      id: "three-color-dango",
+      name: { zh: "三色团子", ja: "三色だんご", en: "Three-Color Dango" },
+      image: "/images/food/三色团子.jpg",
+      rarity: "common",
+      description: { 
+        zh: "传统的三色团子，粉色、白色、绿色，象征着樱花、雪、新叶。",
+        ja: "伝統的な三色だんご、ピンク、白、緑、桜、雪、新芽を象徴しています。",
+        en: "Traditional three-color dango, pink, white, and green, symbolizing cherry blossoms, snow, and new leaves."
+      }
+    },
+    {
+      id: "tonkatsu-don",
+      name: { zh: "炸猪排盖饭", ja: "とんかつ丼", en: "Tonkatsu Don" },
+      image: "/images/food/炸猪排盖饭.jpg",
+      rarity: "rare",
+      description: { 
+        zh: "香脆的炸猪排配以热腾腾的米饭，淋上特制酱汁，美味无比。",
+        ja: "サクサクのとんかつに熱々のご飯、特製ソースをかけて、美味しさが際立ちます。",
+        en: "Crispy tonkatsu with hot rice, topped with special sauce, incredibly delicious."
+      }
+    },
+    {
+      id: "strawberry-ice-cream",
+      name: { zh: "草莓冰淇淋", ja: "いちごアイス", en: "Strawberry Ice Cream" },
+      image: "/images/food/草莓冰淇淋.jpg",
+      rarity: "common",
+      description: { 
+        zh: "香甜的草莓冰淇淋，粉嫩可爱，是夏日甜品的经典选择。",
+        ja: "甘いいちごアイス、ピンクで可愛い、夏のデザートの定番選択です。",
+        en: "Sweet strawberry ice cream, pink and cute, a classic summer dessert choice."
+      }
+    },
+  ]
+

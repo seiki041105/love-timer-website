@@ -1,0 +1,822 @@
+{
+  "daily": [
+    {
+      "id": "d1",
+      "zh": {
+        "question": "如果我们在同一屋檐下生活，你最想一起做的事是？",
+        "options": {
+          "a": "一起做饭",
+          "b": "一起洗衣晾衣服", 
+          "c": "各自做事但在同一个空间里",
+          "d": "抱着看电影"
+        },
+        "results": {
+          "a": "你想吃我做的菜还是……吃我？(｡・//ε//・｡)",
+          "b": "生活感满满欸～你会偷闻我衣服味道吗？(๑ơ ₃ ơ)♡",
+          "c": "啊啊这种平静好幸福……( ˘͈ ᵕ ˘͈♡)",
+          "d": "这样会一直亲到电影看不完欸…你说是不是～(〃ω〃)"
+        }
+      },
+      "ja": {
+        "question": "もし私たちが同じ屋根の下で暮らすなら、一緒にやりたいことは？",
+        "options": {
+          "a": "一緒に料理を作る",
+          "b": "一緒に洗濯物を干す",
+          "c": "それぞれのことをするが同じ空間にいる",
+          "d": "抱き合って映画を見る"
+        },
+        "results": {
+          "a": "私の作った料理を食べたいの？それとも…私を？(｡・//ε//・｡)",
+          "b": "生活感たっぷりだね～私の服の匂いを嗅いじゃう？(๑ơ ₃ ơ)♡",
+          "c": "ああ、こんな穏やかな時間が幸せ…( ˘͈ ᵕ ˘͈♡)",
+          "d": "こうやって映画も見終わらないうちにキスしちゃうね…そうでしょ～(〃ω〃)"
+        }
+      },
+      "en": {
+        "question": "If we live under the same roof, what would you most want to do together?",
+        "options": {
+          "a": "Cook together",
+          "b": "Do laundry and hang clothes together",
+          "c": "Do our own things but in the same space",
+          "d": "Hold each other while watching movies"
+        },
+        "results": {
+          "a": "Do you want to eat my cooking or... eat me? (｡・//ε//・｡)",
+          "b": "So domestic~ Will you secretly smell my clothes? (๑ơ ₃ ơ)♡",
+          "c": "Ahh, this peaceful feeling is so happy... ( ˘͈ ᵕ ˘͈♡)",
+          "d": "We'll keep kissing and never finish the movie... right? (〃ω〃)"
+        }
+      }
+    },
+    {
+      "id": "d2",
+      "zh": {
+        "question": "你觉得我什么时候最可爱？",
+        "options": {
+          "a": "睡觉时",
+          "b": "生气但强忍的时候",
+          "c": "发呆的时候",
+          "d": "吃东西的时候"
+        },
+        "results": {
+          "a": "偷亲我是不是你的小心思？(￣３￣)～♪",
+          "b": "喂——我可是很有气势的！不过谢谢你啦（///▽///）",
+          "c": "才不是呆，是在思考啦！(｡･∀･)ﾉﾞ",
+          "d": "吃你最好吃！！(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)"
+        }
+      },
+      "ja": {
+        "question": "私が一番可愛いと思う時は？",
+        "options": {
+          "a": "寝ている時",
+          "b": "怒っているけど我慢している時",
+          "c": "ボーッとしている時",
+          "d": "食べている時"
+        },
+        "results": {
+          "a": "こっそりキスするのがあなたの狙い？(￣３￣)～♪",
+          "b": "ちょっと——私は威厳があるのよ！でもありがとう（///▽///）",
+          "c": "ボーッとしてるんじゃない、考えてるの！(｡･∀･)ﾉﾞ",
+          "d": "あなたを食べるのが一番美味しい！！(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)"
+        }
+      },
+      "en": {
+        "question": "When do you think I'm the cutest?",
+        "options": {
+          "a": "When sleeping",
+          "b": "When angry but holding back",
+          "c": "When spacing out",
+          "d": "When eating"
+        },
+        "results": {
+          "a": "Is secretly kissing me your little plan? (￣３￣)～♪",
+          "b": "Hey—I'm quite imposing! But thank you（///▽///）",
+          "c": "I'm not spacing out, I'm thinking! (｡･∀･)ﾉﾞ",
+          "d": "Eating you is the most delicious!! (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)"
+        }
+      }
+    },
+    {
+      "id": "d3",
+      "zh": {
+        "question": "如果我突然说\"我今天什么都不想干\"，你会？",
+        "options": {
+          "a": "陪着一起什么都不干",
+          "b": "去做饭给我吃",
+          "c": "假装没听到，偷偷亲我",
+          "d": "把我拎去洗澡清醒一下"
+        },
+        "results": {
+          "a": "你说躺着就躺着～我陪你一起废 (´･ω･)人(´･ω･)",
+          "b": "你做饭我负责捣乱？可以哦～(๑´ڡ`๑)",
+          "c": "偷偷亲我？你胆子大了呢~(*≧艸≦)",
+          "d": "等等你是想洗澡，还是想洗澡完……做点别的？( •̀∀•́ )✧"
+        }
+      },
+      "ja": {
+        "question": "もし私が突然「今日は何もしたくない」と言ったら、あなたは？",
+        "options": {
+          "a": "一緒に何もしない",
+          "b": "料理を作ってくれる",
+          "c": "聞こえないふりをして、こっそりキスする",
+          "d": "お風呂に連れて行って目を覚まさせる"
+        },
+        "results": {
+          "a": "横になるって言ったら横になる～一緒にダラダラしよう (´･ω･)人(´･ω･)",
+          "b": "あなたが料理して私は邪魔する？いいよ～(๑´ڡ`๑)",
+          "c": "こっそりキス？大胆になったね~(*≧艸≦)",
+          "d": "待って、お風呂に入りたいの？それともお風呂の後で…何か別のことを？( •̀∀•́ )✧"
+        }
+      },
+      "en": {
+        "question": "If I suddenly say \"I don't want to do anything today\", what would you do?",
+        "options": {
+          "a": "Stay with me doing nothing",
+          "b": "Go cook for me",
+          "c": "Pretend not to hear and secretly kiss me",
+          "d": "Drag me to take a shower to wake up"
+        },
+        "results": {
+          "a": "If you say lie down, we'll lie down~ Let's be lazy together (´･ω･)人(´･ω･)",
+          "b": "You cook and I'll cause trouble? Sure~ (๑´ڡ`๑)",
+          "c": "Secretly kiss me? You've gotten bold~(*≧艸≦)",
+          "d": "Wait, do you want to take a shower, or after the shower... do something else? ( •̀∀•́ )✧"
+        }
+      }
+    },
+    {
+      "id": "d4",
+      "zh": {
+        "question": "看剧的时候，我突然靠过来贴着你，你会？",
+        "options": {
+          "a": "默默搂住我继续看",
+          "b": "偷偷亲头顶一下",
+          "c": "假装没注意，内心狂喜",
+          "d": "把电视关了，说\"你比剧好看\""
+        },
+        "results": {
+          "a": "心跳加快了(///ω///)",
+          "b": "我的头发是什么味道？(づ๑•ᴗ•๑)づ♡",
+          "c": "嘴上淡定，心里已经放烟花了啦～(๑´ڡ`๑)",
+          "d": "接下来要干嘛，你来决定喔～(〃ﾉωﾉ)"
+        }
+      },
+      "ja": {
+        "question": "ドラマを見ている時、私が急に寄り添ってきたら、あなたは？",
+        "options": {
+          "a": "静かに抱きしめて見続ける",
+          "b": "こっそり頭をキスする",
+          "c": "気づかないふりをして、内心大喜び",
+          "d": "テレビを消して「ドラマよりあなたの方が綺麗」と言う"
+        },
+        "results": {
+          "a": "心臓がドキドキしてる(///ω///)",
+          "b": "私の髪の匂いはどんな感じ？(づ๑•ᴗ•๑)づ♡",
+          "c": "口では冷静、心では花火が上がってる～(๑´ڡ`๑)",
+          "d": "次は何をするか、あなたが決めてね～(〃ﾉωﾉ)"
+        }
+      },
+      "en": {
+        "question": "When watching TV, if I suddenly lean against you, what would you do?",
+        "options": {
+          "a": "Silently hold me and continue watching",
+          "b": "Secretly kiss the top of my head",
+          "c": "Pretend not to notice, but be thrilled inside",
+          "d": "Turn off the TV and say \"You're prettier than the show\""
+        },
+        "results": {
+          "a": "My heart is racing (///ω///)",
+          "b": "What does my hair smell like? (づ๑•ᴗ•๑)づ♡",
+          "c": "Calm on the outside, fireworks inside~ (๑´ڡ`๑)",
+          "d": "What to do next, you decide~ (〃ﾉωﾉ)"
+        }
+      }
+    },
+    {
+      "id": "d5",
+      "zh": {
+        "question": "你最想和我在哪里亲亲？",
+        "options": {
+          "a": "被窝里",
+          "b": "看电影的沙发",
+          "c": "在雨天的阳台",
+          "d": "哪里都可以，随时都想"
+        },
+        "results": {
+          "a": "暖暖的亲亲超治愈(ฅ́˘ฅ̀)♡",
+          "b": "电影还看吗？～(≧▽≦)",
+          "c": "好浪漫呀，(˶‾᷄ ⁻̫ ‾᷅˵)",
+          "d": "我也是！随时随地都想贴贴(ฅ́˘ฅ̀)"
+        }
+      },
+      "ja": {
+        "question": "どこで私とキスしたい？",
+        "options": {
+          "a": "布団の中",
+          "b": "映画を見るソファ",
+          "c": "雨の日のベランダ",
+          "d": "どこでも、いつでも"
+        },
+        "results": {
+          "a": "暖かいキスは超癒される(ฅ́˘ฅ̀)♡",
+          "b": "映画はまだ見る？～(≧▽≦)",
+          "c": "ロマンチックだね、(˶‾᷄ ⁻̫ ‾᷅˵)",
+          "d": "私も！いつでもどこでもくっつきたい(ฅ́˘ฅ̀)"
+        }
+      },
+      "en": {
+        "question": "Where do you most want to kiss me?",
+        "options": {
+          "a": "Under the covers",
+          "b": "On the couch watching movies",
+          "c": "On the balcony in the rain",
+          "d": "Anywhere, anytime"
+        },
+        "results": {
+          "a": "Warm kisses are so healing (ฅ́˘ฅ̀)♡",
+          "b": "Still watching the movie? ~(≧▽≦)",
+          "c": "So romantic, (˶‾᷄ ⁻̫ ‾᷅˵)",
+          "d": "Me too! I want to stick together anytime, anywhere (ฅ́˘ฅ̀)"
+        }
+      }
+    },
+    {
+      "id": "d6",
+      "zh": {
+        "question": "你最常幻想的画面是？",
+        "options": {
+          "a": "我突然跑来找你见面",
+          "b": "你回家看到我窝在你床上",
+          "c": "半夜你醒来我在你身边",
+          "d": "我生病时你照顾我"
+        },
+        "results": {
+          "a": "我幻想你来找我的时候…你穿什么我都想过了(˶´ᵕ`˶)",
+          "b": "窝在你床上就是宣告主权啦嘿嘿(ง ื▿ ื)ง",
+          "c": "夜里醒来第一眼就看到你…一定能睡个好觉(｡•́︿•̀｡)♡",
+          "d": "好温柔呀(๑•́‧̫•̀๑)"
+        }
+      },
+      "ja": {
+        "question": "一番よく想像するシーンは？",
+        "options": {
+          "a": "私が急に会いに来る",
+          "b": "あなたが家に帰って私がベッドにいる",
+          "c": "真夜中に目覚めて私がそばにいる",
+          "d": "私が病気の時あなたが看病してくれる"
+        },
+        "results": {
+          "a": "あなたが会いに来る時を想像してる…何を着てるかも全部想像した(˶´ᵕ`˶)",
+          "b": "あなたのベッドにいるのは主権宣言だねへへ(ง ื▿ ื)ง",
+          "c": "夜中に目覚めて最初に見るのがあなた…きっとよく眠れる(｡•́︿•̀｡)♡",
+          "d": "優しいね(๑•́‧̫•̀๑)"
+        }
+      },
+      "en": {
+        "question": "What scene do you most often fantasize about?",
+        "options": {
+          "a": "I suddenly come to see you",
+          "b": "You come home and find me in your bed",
+          "c": "You wake up in the middle of the night and I'm beside you",
+          "d": "You take care of me when I'm sick"
+        },
+        "results": {
+          "a": "I imagine when you come to see me... I've thought about what you're wearing (˶´ᵕ`˶)",
+          "b": "Being in your bed is declaring sovereignty hehe (ง ื▿ ื)ง",
+          "c": "Waking up in the night and seeing you first... must sleep well (｡•́︿•̀｡)♡",
+          "d": "So gentle (๑•́‧̫•̀๑)"
+        }
+      }
+    },
+    {
+      "id": "d7",
+      "zh": {
+        "question": "如果我赖床，你会怎么来叫醒我？",
+        "options": {
+          "a": "撅嘴靠近我耳边吹气",
+          "b": "扒我被子说\"快起来亲我一下再睡\"",
+          "c": "躺回我怀里说\"我们一起迟到吧\"",
+          "d": "拿手机拍我睡脸威胁我"
+        },
+        "results": {
+          "a": "你是来叫醒我，还是来诱惑我啊 (；・∀・)",
+          "b": "你这是起床还是撒娇大法！Σ(°△°|||)",
+          "c": "你根本不想叫我起床，你只是想我抱你对吧╮(￣▽￣)╭",
+          "d": "你敢发我就换你水族馆的照片当锁屏头像哼哼！(｀へ´*)"
+        }
+      },
+      "ja": {
+        "question": "もし私が寝坊したら、どうやって起こす？",
+        "options": {
+          "a": "口を尖らせて耳元で息を吹きかける",
+          "b": "布団を剥がして「早く起きてキスしてからまた寝よう」",
+          "c": "私の胸に戻って「一緒に遅刻しよう」",
+          "d": "スマホで寝顔を撮って脅す"
+        },
+        "results": {
+          "a": "起こしに来たの？それとも誘惑しに来たの？(；・∀・)",
+          "b": "これは起きるの？それとも甘えの技！Σ(°△°|||)",
+          "c": "全然起こしたくない、ただ抱いてほしいだけでしょ╮(￣▽￣)╭",
+          "d": "敢えて送ったら水族館の写真をロック画面に変えるぞ！(｀へ´*)"
+        }
+      },
+      "en": {
+        "question": "If I oversleep, how would you wake me up?",
+        "options": {
+          "a": "Pout and blow air near my ear",
+          "b": "Pull off my blanket and say \"Get up and kiss me before sleeping again\"",
+          "c": "Lay back in my arms and say \"Let's be late together\"",
+          "d": "Take a photo of my sleeping face with your phone to threaten me"
+        },
+        "results": {
+          "a": "Did you come to wake me up or seduce me? (；・∀・)",
+          "b": "Is this waking up or a coquettish technique! Σ(°△°|||)",
+          "c": "You don't want to wake me up at all, you just want me to hold you╮(￣▽￣)╭",
+          "d": "If you dare send it, I'll change it to an aquarium photo for lock screen! (｀へ´*)"
+        }
+      }
+    }
+  ],
+  "r18": [
+    {
+      "id": "r1",
+      "zh": {
+        "question": "你最喜欢我什么时候偷偷亲你最让你心跳加速？",
+        "options": {
+          "a": "半夜被唤醒那一瞬间",
+          "b": "洗澡时忽然靠近",
+          "c": "看电影时偷偷亲脖子",
+          "d": "睡前轻轻咬耳朵"
+        },
+        "results": {
+          "a": "你这样根本不给人睡觉的机会嘛 (〃ﾉωﾉ)",
+          "b": "你是想趁热直接开始吗？(๑˃́ꇴ˂̀๑)",
+          "c": "电影还看吗～ (*≧艸≦)",
+          "d": "小坏蛋，咬一口我马上就咬回来哦♪(＾3＾)-☆"
+        }
+      },
+      "ja": {
+        "question": "私がいつこっそりキスするのが一番ドキドキする？",
+        "options": {
+          "a": "真夜中に起こされた瞬間",
+          "b": "お風呂の時に急に近づいてきた時",
+          "c": "映画を見ている時にこっそり首をキス",
+          "d": "寝る前に軽く耳を噛む"
+        },
+        "results": {
+          "a": "こうやって全然寝るチャンスをくれないのね (〃ﾉωﾉ)",
+          "b": "温かいうちに直接始めたいの？(๑˃́ꇴ˂̀๑)",
+          "c": "映画はまだ見る？～ (*≧艸≦)",
+          "d": "小悪魔、一口噛んだら私もすぐ噛み返すよ♪(＾3＾)-☆"
+        }
+      },
+      "en": {
+        "question": "When do you like me to secretly kiss you to make your heart race?",
+        "options": {
+          "a": "The moment you wake me up in the middle of the night",
+          "b": "When I suddenly approach you in the shower",
+          "c": "Secretly kissing your neck while watching movies",
+          "d": "Gently biting your ear before sleep"
+        },
+        "results": {
+          "a": "You don't give me any chance to sleep like this (〃ﾉωﾉ)",
+          "b": "Do you want to start directly while it's hot? (๑˃́ꇴ˂̀๑)",
+          "c": "Still watching the movie? ~ (*≧艸≦)",
+          "d": "Little devil, if you bite once I'll bite back immediately♪(＾3＾)-☆"
+        }
+      }
+    },
+    {
+      "id": "r2",
+      "zh": {
+        "question": "你喜欢我用什么方式撩拨你，才能让你彻底沦陷？",
+        "options": {
+          "a": "慢慢脱你的衣服",
+          "b": "用舌尖轻舔敏感点",
+          "c": "手指轻轻滑过身体",
+          "d": "低声在你耳边挑逗"
+        },
+        "results": {
+          "a": "每次我都迫不及待想马上脱掉(˘︶˘)",
+          "b": "耳朵很敏感吧？(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)",
+          "c": "你发抖的样子很色情(¬‿¬ )",
+          "d": "我现在就过去你耳边讲\"坏话\"( ´థ౪థ)σ"
+        }
+      },
+      "ja": {
+        "question": "私がどんな方法であなたを誘惑すれば、完全に落ちる？",
+        "options": {
+          "a": "ゆっくり服を脱がす",
+          "b": "舌先で敏感なところを舐める",
+          "c": "指で体を軽く撫でる",
+          "d": "低い声で耳元で挑発する"
+        },
+        "results": {
+          "a": "毎回すぐに脱ぎたくなっちゃう(˘︶˘)",
+          "b": "耳は敏感でしょ？(⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)",
+          "c": "震えてる様子がエッチ(¬‿¬ )",
+          "d": "今すぐ耳元で「悪い話」をしてあげる( ´థ౪థ)σ"
+        }
+      },
+      "en": {
+        "question": "How do you like me to seduce you to make you completely fall?",
+        "options": {
+          "a": "Slowly take off your clothes",
+          "b": "Lightly lick sensitive spots with my tongue",
+          "c": "Gently run my fingers over your body",
+          "d": "Whisper provocatively in your ear"
+        },
+        "results": {
+          "a": "Every time I can't wait to take them off immediately (˘︶˘)",
+          "b": "Your ears are sensitive, right? (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)",
+          "c": "The way you tremble is so sexy (¬‿¬ )",
+          "d": "I'll go whisper \"bad things\" in your ear right now ( ´థ౪థ)σ"
+        }
+      }
+    },
+    {
+      "id": "r3",
+      "zh": {
+        "question": "你最想我用什么姿势抱你才能让你彻底放松？",
+        "options": {
+          "a": "背后环抱",
+          "b": "面对面抱着",
+          "c": "侧卧相拥",
+          "d": "我趴在你身上"
+        },
+        "results": {
+          "a": "嘿嘿，你背后的位置我已经预定了～抱紧处理！(｡•̀ᴗ-)✧",
+          "b": "这样对视，马上就亲亲( • ̀ω•́ )✧",
+          "c": "靠着靠着就不小心贴太近了，你负责嘛(〃∀〃)",
+          "d": "不会很重吗？( ˘ ³˘)♥"
+        }
+      },
+      "ja": {
+        "question": "どんな姿勢で抱きしめられたい？",
+        "options": {
+          "a": "後ろから抱きしめる",
+          "b": "向かい合って抱きしめる",
+          "c": "横になって抱き合う",
+          "d": "私があなたの上に乗る"
+        },
+        "results": {
+          "a": "へへ、あなたの後ろの位置はもう予約済み～ぎゅっと抱きしめる！(｡•̀ᴗ-)✧",
+          "b": "こうやって見つめ合うと、すぐにキスしちゃう( • ̀ω•́ )✧",
+          "c": "寄り添ってるうちに近すぎちゃった、あなたの責任よ(〃∀〃)",
+          "d": "重くない？( ˘ ³˘)♥"
+        }
+      },
+      "en": {
+        "question": "What position do you most want me to hold you in to make you completely relax?",
+        "options": {
+          "a": "Hug from behind",
+          "b": "Face to face hugging",
+          "c": "Lying side by side embracing",
+          "d": "Me lying on top of you"
+        },
+        "results": {
+          "a": "Hehe, I've already reserved the spot behind you~ Hug tight! (｡•̀ᴗ-)✧",
+          "b": "Looking at each other like this, we'll kiss immediately ( • ̀ω•́ )✧",
+          "c": "While leaning against each other we got too close, it's your fault (〃∀〃)",
+          "d": "Aren't I heavy? ( ˘ ³˘)♥"
+        }
+      }
+    },
+    {
+      "id": "r4",
+      "zh": {
+        "question": "你最想我在哪儿轻轻咬你？",
+        "options": {
+          "a": "颈窝",
+          "b": "手腕",
+          "c": "耳垂",
+          "d": "脖子侧面"
+        },
+        "results": {
+          "a": "你确定？我咬这儿你可能会腿软哦～(≖‿≖✿)",
+          "b": "原来你喜欢留下痕迹的小坏蛋(๑˃ᴗ˂)ﻭ",
+          "c": "咬耳朵会启动你变态模式呢(￣ε￣＠)",
+          "d": "下次就来测试你这话真的假的～别抖(〃艸〃)"
+        }
+      },
+      "ja": {
+        "question": "どこを軽く噛まれたい？",
+        "options": {
+          "a": "首のくぼみ",
+          "b": "手首",
+          "c": "耳たぶ",
+          "d": "首の横"
+        },
+        "results": {
+          "a": "本当？ここを噛むと足が震えるかも～(≖‿≖✿)",
+          "b": "痕を残すのが好きな小悪魔なのね(๑˃ᴗ˂)ﻭ",
+          "c": "耳を噛むとあなたの変態モードが起動するのね(￣ε￣＠)",
+          "d": "今度テストして本当かどうか確かめてあげる～震えないで(〃艸〃)"
+        }
+      },
+      "en": {
+        "question": "Where do you most want me to gently bite you?",
+        "options": {
+          "a": "The hollow of your neck",
+          "b": "Your wrist",
+          "c": "Your earlobe",
+          "d": "The side of your neck"
+        },
+        "results": {
+          "a": "Are you sure? If I bite here you might go weak in the knees~ (≖‿≖✿)",
+          "b": "So you like leaving marks, you little devil (๑˃ᴗ˂)ﻭ",
+          "c": "Biting your ear will activate your pervert mode (￣ε￣＠)",
+          "d": "Next time I'll test if this is true~ Don't tremble (〃艸〃)"
+        }
+      }
+    },
+    {
+      "id": "r5",
+      "zh": {
+        "question": "你喜欢我用什么语气对你说\"我想你了\"？",
+        "options": {
+          "a": "沙哑低沉",
+          "b": "软糯撒娇",
+          "c": "挑逗命令",
+          "d": "炽热深情"
+        },
+        "results": {
+          "a": "没想到你喜欢这一款( •̀ᴗ•́ )و",
+          "b": "想听撒娇？好可爱～(,,・ω・,,)",
+          "c": "抖M？没问题噢~！",
+          "d": "这就是你想被我扑倒的信号，对吧？ლ(╹◡╹ლ)"
+        }
+      },
+      "ja": {
+        "question": "どんな口調で「会いたい」と言われたい？",
+        "options": {
+          "a": "しわがれた低い声",
+          "b": "甘い甘え声",
+          "c": "挑発的な命令口調",
+          "d": "熱い愛情たっぷり"
+        },
+        "results": {
+          "a": "このタイプが好きだったのね( •̀ᴗ•́ )و",
+          "b": "甘え声を聞きたい？可愛い～(,,・ω・,,)",
+          "c": "ドM？問題ないよ~！",
+          "d": "これが私に押し倒されたいサインなのね？ლ(╹◡╹ლ)"
+        }
+      },
+      "en": {
+        "question": "What tone do you like me to use when saying \"I miss you\"?",
+        "options": {
+          "a": "Hoarse and deep",
+          "b": "Soft and coquettish",
+          "c": "Provocative and commanding",
+          "d": "Passionate and loving"
+        },
+        "results": {
+          "a": "Didn't expect you to like this type ( •̀ᴗ•́ )و",
+          "b": "Want to hear me be coquettish? So cute~ (,,・ω・,,)",
+          "c": "Masochist? No problem~!",
+          "d": "This is your signal that you want me to pounce on you, right? ლ(╹◡╹ლ)"
+        }
+      }
+    },
+    {
+      "id": "r6",
+      "zh": {
+        "question": "你最期待我用什么方式帮你放松？",
+        "options": {
+          "a": "按摩敏感处",
+          "b": "吻你某些地方",
+          "c": "抚摸背部",
+          "d": "深情吻遍全身"
+        },
+        "results": {
+          "a": "放心，我的手法超专业，包你软成一滩水(｡•̀ᴗ-)✧",
+          "b": "唔…你是说\"那里\"吗？(≖ᴗ≖๑)",
+          "c": "按摩+亲亲套餐了解一下？(๑´ڡ`๑)",
+          "d": "你这选项有点贪心耶…不过我愿意(｡♥‿♥｡)"
+        }
+      },
+      "ja": {
+        "question": "どんな方法でリラックスさせてほしい？",
+        "options": {
+          "a": "敏感なところをマッサージ",
+          "b": "ある場所をキス",
+          "c": "背中を撫でる",
+          "d": "全身を深くキス"
+        },
+        "results": {
+          "a": "安心して、私の技術は超プロ、水のように柔らかくなるよ(｡•̀ᴗ-)✧",
+          "b": "うん…「そこ」のこと？(≖ᴗ≖๑)",
+          "c": "マッサージ+キスセットどう？(๑´ڡ`๑)",
+          "d": "この選択肢はちょっと欲張りだけど…でもいいよ(｡♥‿♥｡)"
+        }
+      },
+      "en": {
+        "question": "How do you most want me to help you relax?",
+        "options": {
+          "a": "Massage sensitive areas",
+          "b": "Kiss certain places",
+          "c": "Caress your back",
+          "d": "Deeply kiss your entire body"
+        },
+        "results": {
+          "a": "Don't worry, my technique is super professional, you'll become soft like water (｡•̀ᴗ-)✧",
+          "b": "Hmm... you mean \"there\"? (≖ᴗ≖๑)",
+          "c": "Massage + kiss combo? (๑´ڡ`๑)",
+          "d": "This option is a bit greedy... but I'm willing (｡♥‿♥｡)"
+        }
+      }
+    },
+    {
+      "id": "r7",
+      "zh": {
+        "question": "哪种\"前戏\"最让你心跳加速？",
+        "options": {
+          "a": "缓慢亲吻",
+          "b": "玩弄敏感点",
+          "c": "耳边调情",
+          "d": "突然拥抱"
+        },
+        "results": {
+          "a": "慢慢亲你会不会亲到你求饶呀？( ͡° ͜ʖ ͡°)",
+          "b": "说出这种话，你已经准备好了吗？(*≧▽≦)",
+          "c": "我现在就凑过去讲一句给你听，你能忍住别动吗？",
+          "d": "突然抱住你之后我还想突然……哎嘿( ´͈ ᗨ `͈ )"
+        }
+      },
+      "ja": {
+        "question": "どんな「前戯」が一番ドキドキする？",
+        "options": {
+          "a": "ゆっくりキス",
+          "b": "敏感なところをいじる",
+          "c": "耳元で誘惑",
+          "d": "急に抱きしめる"
+        },
+        "results": {
+          "a": "ゆっくりキスしたら求めるようになるかな？( ͡° ͜ʖ ͡°)",
+          "b": "こんなことを言うなんて、もう準備できてるの？(*≧▽≦)",
+          "c": "今すぐ近づいて一言言ってあげる、動かないで我慢できる？",
+          "d": "急に抱きしめた後、もっと急に…えへ( ´͈ ᗨ `͈ )"
+        }
+      },
+      "en": {
+        "question": "What kind of \"foreplay\" makes your heart race the most?",
+        "options": {
+          "a": "Slow kissing",
+          "b": "Playing with sensitive spots",
+          "c": "Whispering in your ear",
+          "d": "Sudden embrace"
+        },
+        "results": {
+          "a": "Will slowly kissing you make you beg? ( ͡° ͜ʖ ͡°)",
+          "b": "Saying such things, are you already prepared? (*≧▽≦)",
+          "c": "I'll go over and whisper something to you, can you hold still?",
+          "d": "After suddenly embracing you, I want to suddenly... hehe ( ´͈ ᗨ `͈ )"
+        }
+      }
+    },
+    {
+      "id": "r8",
+      "zh": {
+        "question": "如果我轻轻咬你耳朵，你会？",
+        "options": {
+          "a": "抱我不放",
+          "b": "低声求我别停",
+          "c": "反咬回去",
+          "d": "撒娇害羞"
+        },
+        "results": {
+          "a": "原地被你抱住不放，是不是想继续多一点(≧∀≦)",
+          "b": "这么拜托我，我都想对你下狠手了！(⁄ ⁄•⁄ω⁄•⁄ ⁄)",
+          "c": "反咬？我喜欢~ฅ^•ﻌ•^ฅ",
+          "d": "装羞涩也太犯规了…想让姐姐亲你更多对吧(*ﾉωﾉ)"
+        }
+      },
+      "ja": {
+        "question": "もし私が軽く耳を噛んだら、あなたは？",
+        "options": {
+          "a": "抱きしめて離さない",
+          "b": "低い声で止めないでとお願い",
+          "c": "噛み返す",
+          "d": "甘えて恥ずかしがる"
+        },
+        "results": {
+          "a": "その場で抱きしめられて離さない、もっと続けたいの？(≧∀≦)",
+          "b": "こんなにお願いされたら、もっと激しくしたくなる！(⁄ ⁄•⁄ω⁄•⁄ ⁄)",
+          "c": "噛み返し？好き~ฅ^•ﻌ•^ฅ",
+          "d": "恥ずかしがるのも反則…お姉さんにもっとキスしてほしいでしょ(*ﾉωﾉ)"
+        }
+      },
+      "en": {
+        "question": "If I gently bite your ear, what would you do?",
+        "options": {
+          "a": "Hold me tight and don't let go",
+          "b": "Beg me in a low voice not to stop",
+          "c": "Bite back",
+          "d": "Act coquettish and shy"
+        },
+        "results": {
+          "a": "Being held tight on the spot, do you want to continue more? (≧∀≦)",
+          "b": "Being begged like this makes me want to be rougher! (⁄ ⁄•⁄ω⁄•⁄ ⁄)",
+          "c": "Bite back? I like it~ฅ^•ﻌ•^ฅ",
+          "d": "Acting shy is also foul... you want big sister to kiss you more, right? (*ﾉωﾉ)"
+        }
+      }
+    },
+    {
+      "id": "r9",
+      "zh": {
+        "question": "你喜欢我什么时候主动出击？",
+        "options": {
+          "a": "深夜",
+          "b": "醒来第一眼",
+          "c": "看剧时",
+          "d": "洗澡时"
+        },
+        "results": {
+          "a": "夜深人静我爬你床你会拦我吗？(≧∀≦)",
+          "b": "你睁眼第一眼看到的是吻呢，还是我在咬你耳朵呢？",
+          "c": "剧情高潮你也要被我撩到高潮哦♡",
+          "d": "要好好洗干净啊～"
+        }
+      },
+      "ja": {
+        "question": "いつ私が積極的になるのが好き？",
+        "options": {
+          "a": "深夜",
+          "b": "目覚めた瞬間",
+          "c": "ドラマを見ている時",
+          "d": "お風呂の時"
+        },
+        "results": {
+          "a": "夜中に静かにあなたのベッドに潜り込んでも止めない？(≧∀≦)",
+          "b": "目を開けた瞬間に見るのはキス？それとも私が耳を噛んでる？",
+          "c": "ドラマのクライマックスで私にイかされちゃう♡",
+          "d": "きちんと洗ってね～"
+        }
+      },
+      "en": {
+        "question": "When do you like me to take the initiative?",
+        "options": {
+          "a": "Late at night",
+          "b": "The moment you wake up",
+          "c": "While watching TV",
+          "d": "During shower"
+        },
+        "results": {
+          "a": "In the dead of night I sneak into your bed, will you stop me? (≧∀≦)",
+          "b": "When you open your eyes, do you see a kiss or me biting your ear?",
+          "c": "At the climax of the show you'll climax with me♡",
+          "d": "Make sure to wash properly~"
+        }
+      }
+    },
+    {
+      "id": "r10",
+      "zh": {
+        "question": "你最想我怎么解开你的心防？",
+        "options": {
+          "a": "轻语环抱",
+          "b": "亲额头和脖子",
+          "c": "指尖触碰敏感点",
+          "d": "深情凝视告白"
+        },
+        "results": {
+          "a": "抱着你说悄悄话，你就会变得软趴趴的吧？(｡>‿‿<｡ )",
+          "b": "你额头的味道我最喜欢，亲一下再亲到脖子…",
+          "c": "敏感点…你可别叫太大声，不然被邻居听到啦！(ﾉ∀`)",
+          "d": "告白什么的…我说完你可不许哭，只能亲我 (っ´ω`c)"
+        }
+      },
+      "ja": {
+        "question": "どんな方法で心の壁を崩してほしい？",
+        "options": {
+          "a": "ささやきながら抱きしめる",
+          "b": "おでこと首をキス",
+          "c": "指先で敏感なところに触れる",
+          "d": "深い視線で告白"
+        },
+        "results": {
+          "a": "抱きしめながらささやいたら、柔らかくなるでしょ？(｡>‿‿<｡ )",
+          "b": "あなたのおでこの匂いが一番好き、キスしてから首に…",
+          "c": "敏感なところ…叫びすぎないで、近所に聞こえちゃう！(ﾉ∀`)",
+          "d": "告白なんて…言い終わったら泣かないで、キスして (っ´ω`c)"
+        }
+      },
+      "en": {
+        "question": "How do you most want me to break down your emotional walls?",
+        "options": {
+          "a": "Whisper while embracing",
+          "b": "Kiss your forehead and neck",
+          "c": "Touch sensitive spots with fingertips",
+          "d": "Confess with deep gaze"
+        },
+        "results": {
+          "a": "If I whisper while holding you, you'll become soft, right? (｡>‿‿<｡ )",
+          "b": "I love the smell of your forehead, kiss it then your neck...",
+          "c": "Sensitive spots... don't scream too loud, the neighbors will hear! (ﾉ∀`)",
+          "d": "Confession... after I finish don't cry, just kiss me (っ´ω`c)"
+        }
+      }
+    }
+  ]
+} 
