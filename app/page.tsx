@@ -4181,7 +4181,7 @@ export default function LoveTimerApp() {
       <div 
         className="absolute inset-0 w-full h-full z-0"
         style={{
-        background: 'linear-gradient(135deg, #fce4ec 0%, #f8bbd9 25%, #f48fb1 50%, #f06292 75%, #ec407a 100%)',
+        background: 'linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 25%, #fce7f3 50%, #f3e8ff 75%, #f9a8d4 100%)',
         backgroundSize: '400% 400%',
         animation: 'gradientShift 15s ease infinite'
        }}
