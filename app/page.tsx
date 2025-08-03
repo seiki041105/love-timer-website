@@ -722,7 +722,7 @@ const PhotoWall = ({ city, onClose, language = "zh" }: { city: string; onClose: 
         "default": {
           "zh": [
             "见面了！我挑选了好久，准备了乌萨奇的花束给你。好开心～",
-            "因为看了地球的运动，来到了地质博物馆，好漂亮啊(这个页面的背景我也特意选择了地球的运动ww)",
+            "因为看了地球的运动，来到了地质博物馆，好漂亮啊",
             "感觉是千空会喜欢的装饰ww写满了化学元素(汉字版)",
             "你说我的发型像全职猎人的某个摩托车 这个姿势像骑摩托的画面ww",
             "和Usagi一起拍了拍立得！好多张！",
@@ -732,7 +732,7 @@ const PhotoWall = ({ city, onClose, language = "zh" }: { city: string; onClose: 
           ],
           "ja": [
             "会えた！すごく選んで、ウサギの花束を準備したよ。超嬉しい～",
-            "地球の運動を見て、地質博物館に来たよ。すごく綺麗！(このページの背景も地球の運動を選んだww)",
+            "地球の運動を見て、地質博物館に来たよ。すごく綺麗！",
             "千空が好きそうな装飾ww化学元素がいっぱい(漢字版)",
             "私の髪型がハンターのバイクみたいって言ってたね このポーズもバイクに乗ってるみたいww",
             "ウサギと一緒にプリクラ撮った！いっぱい！",
@@ -742,7 +742,7 @@ const PhotoWall = ({ city, onClose, language = "zh" }: { city: string; onClose: 
           ],
           "en": [
             "We met! I picked for so long and prepared a Usagi flower bouquet for you. So happy~",
-            "Because I watched Earth's movement, I came to the geological museum. So beautiful! (I also specially chose Earth's movement for this page background ww)",
+            "Because I watched Earth's movement, I came to the geological museum. So beautiful! ",
             "Feels like Senku would like this decoration ww full of chemical elements (Chinese version)",
             "You said my hairstyle looks like a motorcycle from Hunter x Hunter, this pose looks like riding a bike ww",
             "Took purikura with Usagi! So many!",
